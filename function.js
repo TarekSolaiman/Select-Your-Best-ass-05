@@ -38,3 +38,20 @@ document.getElementById('calculate').addEventListener('click', function () {
     const PlayerExpenses = document.getElementById('Player-Expenses')
     PlayerExpenses.innerText = totlePlayerCost;
 })
+
+
+document.getElementById('calculateTotle').addEventListener('click', function () {
+    const PlayerExpenses = document.getElementById('Player-Expenses')
+    const PlayerCost = parseFloat(PlayerExpenses.innerText)
+    const Totle = document.getElementById('Totle-Cost')
+
+    const Manager = getInputValue('Manager')
+    const Coach = getInputValue('Coach')
+    if (isNaN(Manager) || isNaN(Coach) || PlayerCost == 0) {
+        alert('Calculate player cost and Enter the Coach and Manager cost')
+        return
+    }
+    const TotleCost = PlayerCost + Manager + Coach;
+    Totle.innerText = TotleCost;
+
+})

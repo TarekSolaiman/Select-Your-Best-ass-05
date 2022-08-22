@@ -13,3 +13,8 @@ function getAddlist(playerId, btnId) {
     document.getElementById(btnId).setAttribute("class", 'py-2 bg-yellow-300 px-10 bg-yellow-100 rounded-md');
     document.getElementById(btnId).setAttribute("disabled", false);
 }
+function getInputValue(idName) {
+    const inputValue = document.getElementById(idName)
+    const inputNumber = parseFloat(inputValue.value)
+    return inputNumber;
+}
